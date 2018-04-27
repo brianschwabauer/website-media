@@ -1,0 +1,26 @@
+{
+  "name": "brianschwabauermedia",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "serve": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian Schwabauer",
+  "license": "MIT",
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-base64-img": "^0.1.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-gm": "0.0.9",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-rename": "^1.2.2",
+    "merge-stream": "^1.0.1",
+    "node-vibrant": "^3.0.0",
+    "progress": "^2.0.0",
+    "through2": "^2.0.3",
+    "gulp-watch": "^5.0.0"
+  },
+  "devDependencies": {}
+}
