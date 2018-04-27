@@ -44,16 +44,26 @@ A local file watcher will be run. Anytime a file is added to the './www/upload/'
 
 ### How to use - Docker
 
-To run the container, attach a volume to the srv directory
+You can either build the docker image using the Dockerfile included or use the already built image.
+
+[Here is the prebuilt docker image](https://hub.docker.com/r/brianschwabauer/website-media/)
+
+Because it is in dockerhub, you can simply create run a new container with 'brianschwabauer/website-media:latest'
 
 ```
-docker run --rm -v a:/docker:/srv media:latest
+docker run --rm brianschwabauer/website-media:latest
+```
+
+To run the container with actual files on your website, attach a volume to the srv directory
+
+```
+docker run --rm -v NameOfVolume:/srv brianschwabauer/website-media:latest
 ```
 
 Environment variables can be given to specify a subfolder in the volume
 
 ```
-docker run --rm -e MEDIA_LOCATION="/srv/brianschwabauer/media" -e UPLOADED_FOLDER="upload" -e CONVERTED_FOLDER="img" -v a:/docker:/srv media:latest
+docker run --rm -e MEDIA_LOCATION="/srv/brianschwabauer/media" -e UPLOADED_FOLDER="upload" -e CONVERTED_FOLDER="img" -v NameOfVolume:/srv brianschwabauer/website-media:latest
 ```
 
 Environment Variables Available
